@@ -37,12 +37,12 @@ extract.export(output_path, format="wav")
 model = whisper.load_model("small") 
 
 #transcribe wav file. Language detection automatic
-result= model.transcribe(r"C:\Users\isaldiviagonzatti\Downloads\20220901_NicoverdeJorgeSanchez_extract.wav")
+result= model.transcribe(r"file.wav")
 
 #see result
 result10min=result['text']
 
-#save result as text file 
-text_file = open(r"C:\Users\isaldiviagonzatti\Downloads\Jorge.txt", "w")
+#save result as text file
+text_file = open(r"textfile.txt", "w")
 text_file.write(result10min)
 text_file.close()
